@@ -568,8 +568,12 @@ class CapacitorGoogleMap(
             callback(Result.failure(e))
         }
     }
+    
+    fun getRawGoogleMapInstance(callback: (type: String, error: GoogleMapsError?) -> Unit) {
+        throw GoogleMapsError('Not implemented on Android platform.');
+    }
 
-        fun addFeatures(type: String, data: JSONObject, idPropertyName: String?, styles: JSONObject?, callback: (ids: Result<List<String>>) -> Unit) {
+    fun addFeatures(type: String, data: JSONObject, idPropertyName: String?, styles: JSONObject?, callback: (ids: Result<List<String>>) -> Unit) {
         try {
             googleMap ?: throw GoogleMapNotAvailable()
             val featureIds: MutableList<String> = mutableListOf()

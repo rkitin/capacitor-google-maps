@@ -28,6 +28,7 @@ import type {
   GetFeatureBoundsArgs,
   RemoveFeatureArgs,
   UpdateMapArgs,
+  RawGoogleMapInstanceArgs,
 } from './implementation';
 
 class MapInstance {
@@ -569,6 +570,10 @@ export class CapacitorGoogleMapsWeb extends WebPlugin implements CapacitorGoogle
 
   private setMapTypeId(mapInstance: MapInstance, typeId: string): void {
     mapInstance.map.setMapTypeId(typeId);
+  }
+
+  public getRawGoogleMapInstance(_args: RawGoogleMapInstanceArgs): google.maps.Map {
+    return this.maps[_args.id].map;
   }
 
   private setPadding(mapInstance: MapInstance, padding: MapPadding): void {

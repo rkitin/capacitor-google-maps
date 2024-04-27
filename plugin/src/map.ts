@@ -57,6 +57,7 @@ export interface GoogleMapInterface {
   removeFeature(featureId: string): Promise<void>;
   destroy(): Promise<void>;
   setCamera(config: CameraConfig): Promise<void>;
+  getRawGoogleMapInstance(): Promise<google.maps.Map>;
   /**
    * Get current map type
    * @deprecated This function will be removed in v6. Use {@link #update()} instead.
@@ -557,6 +558,12 @@ export class GoogleMap {
     return CapacitorGoogleMaps.setCamera({
       id: this.id,
       config,
+    });
+  }
+
+  public async getRawGoogleMapInstance(): Promise<google.maps.Map> {
+    return await CapacitorGoogleMaps.getRawGoogleMapInstance({
+      id: this.id,
     });
   }
 

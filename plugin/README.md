@@ -304,6 +304,7 @@ export default MyMap;
 * [`removeFeature(...)`](#removefeature)
 * [`destroy()`](#destroy)
 * [`setCamera(...)`](#setcamera)
+* [`getRawGoogleMapInstance()`](#getrawgooglemapinstance)
 * [`getMapType()`](#getmaptype)
 * [`setMapType(...)`](#setmaptype)
 * [`enableIndoorMaps(...)`](#enableindoormaps)
@@ -634,6 +635,17 @@ setCamera(config: CameraConfig) => Promise<void>
 | Param        | Type                                                  |
 | ------------ | ----------------------------------------------------- |
 | **`config`** | <code><a href="#cameraconfig">CameraConfig</a></code> |
+
+--------------------
+
+
+### getRawGoogleMapInstance()
+
+```typescript
+getRawGoogleMapInstance() => Promise<google.maps.Map>
+```
+
+**Returns:** <code>Promise&lt;Map&gt;</code>
 
 --------------------
 

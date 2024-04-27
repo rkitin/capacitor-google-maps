@@ -534,7 +534,11 @@ public class CapacitorGoogleMapsPlugin: CAPPlugin, GMSMapViewDelegate {
         }
     }
 
-        @objc func addFeatures(_ call: CAPPluginCall) {
+    @objc func getRawGoogleMapInstance(_ call: CAPPluginCall) {
+        throw GoogleMapErrors.unhandledError("Not implemented on iOS platform");
+    }
+
+    @objc func addFeatures(_ call: CAPPluginCall) {
         do {
             guard let id = call.getString("id") else {
                 throw GoogleMapErrors.invalidMapId

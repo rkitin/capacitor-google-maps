@@ -141,6 +141,10 @@ export interface CameraArgs {
   config: CameraConfig;
 }
 
+export interface RawGoogleMapInstanceArgs {
+  id: string;
+}
+
 export interface AccElementsArgs {
   id: string;
   enabled: boolean;
@@ -202,6 +206,7 @@ export interface CapacitorGoogleMapsPlugin extends Plugin {
   disableClustering(args: { id: string }): Promise<void>;
   destroy(args: DestroyMapArgs): Promise<void>;
   setCamera(args: CameraArgs): Promise<void>;
+  getRawGoogleMapInstance(args: RawGoogleMapInstanceArgs): google.maps.Map;
   onScroll(args: MapBoundsArgs): Promise<void>;
   onResize(args: MapBoundsArgs): Promise<void>;
   onDisplay(args: MapBoundsArgs): Promise<void>;
