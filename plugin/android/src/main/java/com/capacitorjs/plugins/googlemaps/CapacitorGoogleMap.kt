@@ -352,27 +352,25 @@ class CapacitorGoogleMap(
             val markerIds: MutableList<String> = mutableListOf()
 
             CoroutineScope(Dispatchers.Main).launch {
-                newMarkers.forEach {
-                    val markerOptions: Deferred<MarkerOptions> =
-                            CoroutineScope(Dispatchers.IO).async {
-                                this@CapacitorGoogleMap.buildMarker(it)
-                            }
-                    val googleMapMarker = googleMap?.addMarker(markerOptions.await())
-                    it.googleMapMarker = googleMapMarker
-
-                    if (googleMapMarker != null) {
-                        if (clusterManager != null) {
-                            googleMapMarker.remove()
-                        }
-
-                        markers[googleMapMarker.id] = it
-                        markerIds.add(googleMapMarker.id)
-                    }
+                val markerOptionsList = withContext(Dispatchers.IO) {
+                    newMarkers.map { buildMarker(it) }
                 }
 
-                if (clusterManager != null) {
-                    clusterManager?.addItems(newMarkers)
-                    clusterManager?.cluster()
+                markerOptionsList.forEachIndexed { index, markerOptions ->
+                    val googleMapMarker = googleMap?.addMarker(markerOptions)
+                    val capacitorMarker = newMarkers[index]
+                    googleMapMarker?.let { marker ->
+                        if (clusterManager != null) {
+                            marker.remove()
+                        } else {
+                            markers[marker.id] = capacitorMarker
+                            markerIds.add(marker.id)
+                        }
+                    }
+                }
+                clusterManager?.let { manager ->
+                    manager.addItems(newMarkers)
+                    manager.cluster()
                 }
 
                 callback(Result.success(markerIds))
