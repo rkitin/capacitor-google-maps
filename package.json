@@ -19,13 +19,13 @@
     "@types/node": "^20.11.25",
     "husky": "^9.0.1",
     "lerna": "^8.1.2",
+    "regexp-to-ast": "^0.5.0",
     "typescript": "^5.4.2"
   },
   "engines": {
     "node": ">=20",
     "pnpm": ">=8"
   },
-  "dependencies": {},
   "workspaces": [
     "plugin"
   ]
