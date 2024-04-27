@@ -57,7 +57,6 @@ class CapacitorGoogleMap(
     private val markers = HashMap<String, CapacitorGoogleMapMarker>()
     private val polygons = HashMap<String, CapacitorGoogleMapsPolygon>()
     private val circles = HashMap<String, CapacitorGoogleMapsCircle>()
-    private val polylines = HashMap<String, CapacitorGoogleMapPolyline>()        
     private val polylines = HashMap<String, CapacitorGoogleMapPolyline>()
     private val featureLayers = HashMap<String, CapacitorGoogleMapsFeatureLayer>()
     private val markerIcons = HashMap<String, Bitmap>()
@@ -570,7 +569,7 @@ class CapacitorGoogleMap(
     }
     
     fun getRawGoogleMapInstance(callback: (type: String, error: GoogleMapsError?) -> Unit) {
-        throw GoogleMapsError('Not implemented on Android platform.');
+        throw GoogleMapsError("Not implemented on Android platform.");
     }
 
     fun addFeatures(type: String, data: JSONObject, idPropertyName: String?, styles: JSONObject?, callback: (ids: Result<List<String>>) -> Unit) {
