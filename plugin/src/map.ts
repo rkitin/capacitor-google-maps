@@ -22,6 +22,7 @@ import type {
   FeatureType,
   FeatureStyles,
   GoogleMapConfig,
+  TileOverlay,
 } from './definitions';
 import { LatLngBounds, MapType } from './definitions';
 import type { CreateMapArgs } from './implementation';
@@ -40,6 +41,7 @@ export interface GoogleMapInterface {
     minClusterSize?: number
   ): Promise<void>;
   disableClustering(): Promise<void>;
+  addTileOverlay(tiles: TileOverlay): Promise<void>;
   addMarker(marker: Marker): Promise<string>;
   addMarkers(markers: Marker[]): Promise<string[]>;
   removeMarker(id: string): Promise<void>;
@@ -353,6 +355,16 @@ export class GoogleMap {
   async disableClustering(): Promise<void> {
     return CapacitorGoogleMaps.disableClustering({
       id: this.id,
+    });
+  }
+
+  /**
+   * Adds a TileOverlay to the map
+   */
+  async addTileOverlay(tiles: TileOverlay): Promise<any> {
+    return await CapacitorGoogleMaps.addTileOverlay({
+      id: this.id,
+      ...tiles,
     });
   }
 

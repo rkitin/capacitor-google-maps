@@ -288,6 +288,7 @@ export default MyMap;
 * [`getOptions()`](#getoptions)
 * [`enableClustering(...)`](#enableclustering)
 * [`disableClustering()`](#disableclustering)
+* [`addTileOverlay(...)`](#addtileoverlay)
 * [`addMarker(...)`](#addmarker)
 * [`addMarkers(...)`](#addmarkers)
 * [`removeMarker(...)`](#removemarker)
@@ -412,6 +413,19 @@ enableClustering(minClusterSize?: number | undefined) => Promise<void>
 ```typescript
 disableClustering() => Promise<void>
 ```
+
+--------------------
+
+
+### addTileOverlay(...)
+
+```typescript
+addTileOverlay(tiles: TileOverlay) => Promise<void>
+```
+
+| Param       | Type                                                |
+| ----------- | --------------------------------------------------- |
+| **`tiles`** | <code><a href="#tileoverlay">TileOverlay</a></code> |
 
 --------------------
 
@@ -1039,6 +1053,20 @@ Controls for setting padding on the 'visible' region of the view.
 | **`left`**   | <code>number</code> |
 | **`right`**  | <code>number</code> |
 | **`bottom`** | <code>number</code> |
+
+
+#### TileOverlay
+
+For web, all the javascript <a href="#tileoverlay">TileOverlay</a> options are available as
+For iOS and Android only the config options declared on <a href="#tileoverlay">TileOverlay</a> are available.
+
+| Prop          | Type                                                           |
+| ------------- | -------------------------------------------------------------- |
+| **`getTile`** | <code>(x: number, y: number, zoom: number) =&gt; string</code> |
+| **`opacity`** | <code>number</code>                                            |
+| **`visible`** | <code>boolean</code>                                           |
+| **`zIndex`**  | <code>number</code>                                            |
+| **`debug`**   | <code>boolean</code>                                           |
 
 
 #### Marker
