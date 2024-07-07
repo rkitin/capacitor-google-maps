@@ -1,6 +1,6 @@
 import { IonButton, IonTextarea } from '@ionic/react';
 import { useState } from 'react';
-import { GoogleMap } from '@capacitor/google-maps';
+import { GoogleMap } from 'capacitor6-google-maps';
 import BaseTestingPage from '../../components/BaseTestingPage';
 
 const PolygonMapPage: React.FC = () => {

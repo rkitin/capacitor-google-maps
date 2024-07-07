@@ -3,23 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [6.0.0-rc.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@6.0.0-beta.1...@capacitor/google-maps@6.0.0-rc.0) (2024-02-07)
+# [6.0.0.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@6.0.0-beta.1...capacitor6-google-maps@6.0.0.0) (2024-02-07)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
-# [6.0.0-beta.1](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@6.0.0-beta.0...@capacitor/google-maps@6.0.0-beta.1) (2023-12-14)
+# [6.0.0-beta.1](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@6.0.0-beta.0...capacitor6-google-maps@6.0.0-beta.1) (2023-12-14)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
-# [6.0.0-beta.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@6.0.0-alpha.2...@capacitor/google-maps@6.0.0-beta.0) (2023-12-13)
+# [6.0.0-beta.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@6.0.0-alpha.2...capacitor6-google-maps@6.0.0-beta.0) (2023-12-13)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
-# [6.0.0-alpha.2](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@6.0.0-alpha.1...@capacitor/google-maps@6.0.0-alpha.2) (2023-11-15)
+# [6.0.0-alpha.2](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@6.0.0-alpha.1...capacitor6-google-maps@6.0.0-alpha.2) (2023-11-15)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
-# [6.0.0-alpha.1](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.3.0...@capacitor/google-maps@6.0.0-alpha.1) (2023-11-08)
+# [6.0.0-alpha.1](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.3.0...capacitor6-google-maps@6.0.0-alpha.1) (2023-11-08)
 
 ### Bug Fixes
 
@@ -33,13 +33,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **google-maps:** Separate mapId for Google Maps Cloud IDs ([#1750](https://github.com/ionic-team/capacitor-plugins/issues/1750)) ([88a633c](https://github.com/ionic-team/capacitor-plugins/commit/88a633ccab6753fe2559a9b8b55a697022fe327c))
 
-# [5.4.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.3.3...@capacitor/google-maps@5.4.0) (2023-12-15)
+# [5.4.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.3.3...capacitor6-google-maps@5.4.0) (2023-12-15)
 
 ### Features
 
 - **google-maps:** Separate mapId for Google Maps Cloud IDs ([#1943](https://github.com/ionic-team/capacitor-plugins/issues/1943)) ([bf7ec33](https://github.com/ionic-team/capacitor-plugins/commit/bf7ec3306e7943358ac9ea118b904ff27d6ea2f6))
 
-## [5.3.3](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.3.2...@capacitor/google-maps@5.3.3) (2023-10-04)
+## [5.3.3](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.3.2...capacitor6-google-maps@5.3.3) (2023-10-04)
 
 ### Bug Fixes
 
@@ -47,35 +47,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **google-maps:** correctly apply CapacitorGoogleMapsPoint y value ([#1815](https://github.com/ionic-team/capacitor-plugins/issues/1815)) ([3c7e531](https://github.com/ionic-team/capacitor-plugins/commit/3c7e531dc1e49fa2a3267cdae3dda2379e62c005))
 - **google-maps:** use URLSession for remote iconUrl on iOS ([#1818](https://github.com/ionic-team/capacitor-plugins/issues/1818)) ([#1824](https://github.com/ionic-team/capacitor-plugins/issues/1824)) ([73ad64b](https://github.com/ionic-team/capacitor-plugins/commit/73ad64b665406d028cf2e171da89801a0ea9cf78))
 
-## [5.3.2](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.3.1...@capacitor/google-maps@5.3.2) (2023-09-14)
+## [5.3.2](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.3.1...capacitor6-google-maps@5.3.2) (2023-09-14)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
-## [5.3.1](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.3.0...@capacitor/google-maps@5.3.1) (2023-08-23)
+## [5.3.1](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.3.0...capacitor6-google-maps@5.3.1) (2023-08-23)
 
 ### Bug Fixes
 
 - **google-maps:** attach native map view to correct scroll view ([#1638](https://github.com/ionic-team/capacitor-plugins/issues/1638)) ([dfe6043](https://github.com/ionic-team/capacitor-plugins/commit/dfe6043e8cbeb9aeabe847f62341dcaae674951a))
 - **google-maps:** problems on get/setMapType on web ([#1738](https://github.com/ionic-team/capacitor-plugins/issues/1738)) ([a23202f](https://github.com/ionic-team/capacitor-plugins/commit/a23202fce338899e4ffa23b948ddd7394af127e0))
 
-# [5.3.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.2.2...@capacitor/google-maps@5.3.0) (2023-08-09)
+# [5.3.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.2.2...capacitor6-google-maps@5.3.0) (2023-08-09)
 
 ### Features
 
 - **google-maps:** Added feature to disable touch events on map ([#1601](https://github.com/ionic-team/capacitor-plugins/issues/1601)) ([c4e3871](https://github.com/ionic-team/capacitor-plugins/commit/c4e387102b42f403970c10fbf82409c8a55bd361))
 - **google-maps:** Update map size in updateRender method if it has changed ([#1595](https://github.com/ionic-team/capacitor-plugins/issues/1595)) ([318fc40](https://github.com/ionic-team/capacitor-plugins/commit/318fc40b9b117a46e51fe910e4e02ef9c8e85c92))
 
-## [5.2.2](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.2.1...@capacitor/google-maps@5.2.2) (2023-07-19)
+## [5.2.2](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.2.1...capacitor6-google-maps@5.2.2) (2023-07-19)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
-## [5.2.1](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.2.0...@capacitor/google-maps@5.2.1) (2023-07-12)
+## [5.2.1](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.2.0...capacitor6-google-maps@5.2.1) (2023-07-12)
 
 ### Bug Fixes
 
 - **google-maps:** Add missing listeners to removeAllMapListeners ([#1672](https://github.com/ionic-team/capacitor-plugins/issues/1672)) ([7e1911d](https://github.com/ionic-team/capacitor-plugins/commit/7e1911d6cd192a023938bf30d0ca9f573d6076e6))
 
-# [5.2.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.1.2...@capacitor/google-maps@5.2.0) (2023-06-29)
+# [5.2.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.1.2...capacitor6-google-maps@5.2.0) (2023-06-29)
 
 ### Bug Fixes
 
@@ -85,15 +85,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **google-maps:** add fitBounds to Map object ([f4ae690](https://github.com/ionic-team/capacitor-plugins/commit/f4ae690fbddfc2bad9a931d4a987499eed63a09b))
 
-## [5.1.2](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.1.1...@capacitor/google-maps@5.1.2) (2023-06-08)
+## [5.1.2](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.1.1...capacitor6-google-maps@5.1.2) (2023-06-08)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
-## [5.1.1](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.1.0...@capacitor/google-maps@5.1.1) (2023-06-08)
+## [5.1.1](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.1.0...capacitor6-google-maps@5.1.1) (2023-06-08)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
-# [5.1.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.0.1...@capacitor/google-maps@5.1.0) (2023-05-09)
+# [5.1.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.0.1...capacitor6-google-maps@5.1.0) (2023-05-09)
 
 ### Bug Fixes
 
@@ -103,17 +103,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **google-maps:** Add ability to set language and region on map ([#1588](https://github.com/ionic-team/capacitor-plugins/issues/1588)) ([c4a296c](https://github.com/ionic-team/capacitor-plugins/commit/c4a296cb17746d454de7d805bd178362d6a5ae48))
 
-## [5.0.1](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.0.0...@capacitor/google-maps@5.0.1) (2023-05-05)
+## [5.0.1](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.0.0...capacitor6-google-maps@5.0.1) (2023-05-05)
 
 ### Bug Fixes
 
 - Use Capacitor 5 final ([#1574](https://github.com/ionic-team/capacitor-plugins/issues/1574)) ([139c18b](https://github.com/ionic-team/capacitor-plugins/commit/139c18b86a11d31246e952d1a74335ff8ce5dbc2))
 
-# [5.0.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.0.0-beta.1...@capacitor/google-maps@5.0.0) (2023-05-03)
+# [5.0.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.0.0-beta.1...capacitor6-google-maps@5.0.0) (2023-05-03)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
-# [5.0.0-beta.1](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.0.0-beta.0...@capacitor/google-maps@5.0.0-beta.1) (2023-04-21)
+# [5.0.0-beta.1](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.0.0-beta.0...capacitor6-google-maps@5.0.0-beta.1) (2023-04-21)
 
 ### Bug Fixes
 
@@ -127,7 +127,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **google-maps:** Polylines support ([#1532](https://github.com/ionic-team/capacitor-plugins/issues/1532)) ([415f42b](https://github.com/ionic-team/capacitor-plugins/commit/415f42b351d4ac8fd555efc3d6b0dfa9b09a80b9))
 - Update gradle to 8.0.2 and gradle plugin to 8.0.0 ([#1542](https://github.com/ionic-team/capacitor-plugins/issues/1542)) ([e7210b4](https://github.com/ionic-team/capacitor-plugins/commit/e7210b47867644f5983e37acdbf0247214ec232d))
 
-# [5.0.0-beta.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@5.0.0-alpha.1...@capacitor/google-maps@5.0.0-beta.0) (2023-03-31)
+# [5.0.0-beta.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@5.0.0-alpha.1...capacitor6-google-maps@5.0.0-beta.0) (2023-03-31)
 
 ### Bug Fixes
 
@@ -137,14 +137,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **google-maps:** add extend to LatLngBounds ([fb2dc0d](https://github.com/ionic-team/capacitor-plugins/commit/fb2dc0d42f9eaa928e9bdb38980ac9b84ae4c4b7))
 
-# [5.0.0-alpha.1](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@4.5.0...@capacitor/google-maps@5.0.0-alpha.1) (2023-03-16)
+# [5.0.0-alpha.1](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@4.5.0...capacitor6-google-maps@5.0.0-alpha.1) (2023-03-16)
 
 ### Features
 
 - **android:** Removing enableJetifier ([d66f9cb](https://github.com/ionic-team/capacitor-plugins/commit/d66f9cbd9da7e3b1d8c64ca6a5b45156867d4a04))
 - **google-maps:** add zIndex to markers ([53a0436](https://github.com/ionic-team/capacitor-plugins/commit/53a04366ad331ada081589aef9c726b4356688df))
 
-# [4.5.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@4.4.0...@capacitor/google-maps@4.5.0) (2023-02-22)
+# [4.5.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@4.4.0...capacitor6-google-maps@4.5.0) (2023-02-22)
 
 ### Bug Fixes
 
@@ -155,7 +155,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **google-maps:** add contains to LatLngBounds ([a6b9962](https://github.com/ionic-team/capacitor-plugins/commit/a6b9962f1b6d6c2f873dd8c373b7aa16a49eff6d))
 - **google-maps:** Add getMapType method ([#1420](https://github.com/ionic-team/capacitor-plugins/issues/1420)) ([c2fa96f](https://github.com/ionic-team/capacitor-plugins/commit/c2fa96fc709b59fa55a6f61ecb4d80be214982c5))
 
-# [4.4.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@4.3.2...@capacitor/google-maps@4.4.0) (2023-02-03)
+# [4.4.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@4.3.2...capacitor6-google-maps@4.4.0) (2023-02-03)
 
 ### Bug Fixes
 
@@ -165,11 +165,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **google-maps:** Add minClusterSize setting for enableClustering ([#1399](https://github.com/ionic-team/capacitor-plugins/issues/1399)) ([fba34b8](https://github.com/ionic-team/capacitor-plugins/commit/fba34b823e60aba43f82761bf7c3b42675702b7f))
 
-## [4.3.2](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@4.3.1...@capacitor/google-maps@4.3.2) (2022-12-01)
+## [4.3.2](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@4.3.1...capacitor6-google-maps@4.3.2) (2022-12-01)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
-## [4.3.1](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@4.3.0...@capacitor/google-maps@4.3.1) (2022-11-16)
+## [4.3.1](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@4.3.0...capacitor6-google-maps@4.3.1) (2022-11-16)
 
 ### Bug Fixes
 
@@ -177,7 +177,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **google-maps:** Remove log of marker options ([#1247](https://github.com/ionic-team/capacitor-plugins/issues/1247)) ([5bb3000](https://github.com/ionic-team/capacitor-plugins/commit/5bb30005df075ce1679695792e33f398eee298c4))
 - **google-maps:** Retry getting the map size if it's 0 ([#1252](https://github.com/ionic-team/capacitor-plugins/issues/1252)) ([9bffdb5](https://github.com/ionic-team/capacitor-plugins/commit/9bffdb529f41cadc2e5a33c4a09d5ebfacf4baed))
 
-# [4.3.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@4.2.1...@capacitor/google-maps@4.3.0) (2022-10-21)
+# [4.3.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@4.2.1...capacitor6-google-maps@4.3.0) (2022-10-21)
 
 ### Bug Fixes
 
@@ -189,21 +189,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **google-maps:** Add more config options ([#1233](https://github.com/ionic-team/capacitor-plugins/issues/1233)) ([8bebf97](https://github.com/ionic-team/capacitor-plugins/commit/8bebf9745f6538d4bc7f1622b2b4a0317f306bfb))
 
-## [4.2.1](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@4.2.0...@capacitor/google-maps@4.2.1) (2022-09-29)
+## [4.2.1](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@4.2.0...capacitor6-google-maps@4.2.1) (2022-09-29)
 
 ### Bug Fixes
 
 - **google-maps:** adding missing marker draggable property for web ([#1184](https://github.com/ionic-team/capacitor-plugins/issues/1184)) ([2eb0e7e](https://github.com/ionic-team/capacitor-plugins/commit/2eb0e7e6db9d3f6a684d2c9a0e2e7ec94d5dfa63))
 - **google-maps:** onClusterClickHandler not getting marker ids on web ([#1039](https://github.com/ionic-team/capacitor-plugins/issues/1039)) ([b04e32d](https://github.com/ionic-team/capacitor-plugins/commit/b04e32d6fcab39285ba6dbe49408e001177cf13f))
 
-# [4.2.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@4.1.0...@capacitor/google-maps@4.2.0) (2022-09-12)
+# [4.2.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@4.1.0...capacitor6-google-maps@4.2.0) (2022-09-12)
 
 ### Features
 
 - **google-maps:** Marker Customization Options ([#1146](https://github.com/ionic-team/capacitor-plugins/issues/1146)) ([bb77432](https://github.com/ionic-team/capacitor-plugins/commit/bb77432ac28ec5de5c5d2584f4f2ccf874e5c197))
 - **google-maps:** Marker Drag Listeners ([833f28d](https://github.com/ionic-team/capacitor-plugins/commit/833f28dc8e28553673c861619a2ac9540f39e33a))
 
-# [4.1.0](https://github.com/ionic-team/capacitor-plugins/compare/@capacitor/google-maps@1.1.0...@capacitor/google-maps@4.1.0) (2022-08-24)
+# [4.1.0](https://github.com/ionic-team/capacitor-plugins/compare/capacitor6-google-maps@1.1.0...capacitor6-google-maps@4.1.0) (2022-08-24)
 
 ### Bug Fixes
 
@@ -211,11 +211,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [4.0.1](https://github.com/ionic-team/capacitor-plugins/compare/4.0.0...4.0.1) (2022-07-28)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
 # [4.0.0](https://github.com/ionic-team/capacitor-plugins/compare/4.0.0-beta.2...4.0.0) (2022-07-27)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps
 
 # [4.0.0-beta.2](https://github.com/ionic-team/capacitor-plugins/compare/4.0.0-beta.0...4.0.0-beta.2) (2022-07-08)
 
@@ -247,4 +247,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0](https://github.com/ionic-team/capacitor-plugins/tree/main/google-maps) (2022-04-28)
 
-**Note:** Version bump only for package @capacitor/google-maps
+**Note:** Version bump only for package capacitor6-google-maps

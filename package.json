@@ -28,5 +28,8 @@
   },
   "workspaces": [
     "plugin"
-  ]
+  ],
+  "dependencies": {
+    "npm": "^10.8.1"
+  }
 }
