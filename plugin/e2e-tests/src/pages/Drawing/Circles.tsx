@@ -1,6 +1,6 @@
 import { IonButton, IonTextarea } from '@ionic/react';
 import { useState } from 'react';
-import { Circle, GoogleMap } from 'capacitor6-google-maps';
+import { Circle, GoogleMap } from 'capacitor7-google-maps';
 import BaseTestingPage from '../../components/BaseTestingPage';
 
 const CircleMapPage: React.FC = () => {
