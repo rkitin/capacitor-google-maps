@@ -96,7 +96,7 @@ export class CapacitorGoogleMapsWeb extends WebPlugin implements CapacitorGoogle
     map: google.maps.Map
   ): void => {
     const mapId = this.getIdFromMap(map);
-    const items: any[] = [];
+    const items: unknown[] = [];
 
     if (cluster.markers != undefined) {
       for (const marker of cluster.markers) {
@@ -206,7 +206,7 @@ export class CapacitorGoogleMapsWeb extends WebPlugin implements CapacitorGoogle
     map.fitBounds(bounds, _args.padding);
   }
 
-  async addTileOverlay(_args: AddTileOverlayArgs): Promise<any> {
+  async addTileOverlay(_args: AddTileOverlayArgs): Promise<unknown> {
     const map = this.maps[_args.id].map;
 
     const tileSize = new google.maps.Size(256, 256); // Create a google.maps.Size instance
@@ -230,7 +230,7 @@ export class CapacitorGoogleMapsWeb extends WebPlugin implements CapacitorGoogle
 
     // Optionally, you can set debug mode if needed
     if (_args?.debug) {
-      map.addListener('mousemove', function (event: any) {
+      map.addListener('mousemove', function (event: unknown) {
         console.log('Mouse Coordinates: ', event.latLng.toString());
       });
     }
@@ -405,7 +405,7 @@ export class CapacitorGoogleMapsWeb extends WebPlugin implements CapacitorGoogle
     if (args.styles) {
       map.map.data.setStyle((feature) => {
         const featureId = feature.getId();
-        return featureId ? (args.styles?.[featureId] as any) : null;
+        return featureId ? (args.styles?.[featureId] as unknown) : null;
       });
     }
 

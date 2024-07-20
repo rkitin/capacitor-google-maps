@@ -1053,6 +1053,7 @@ For iOS and Android the following options from google.maps.MapOptions with the s
 | **`isTrafficLayerEnabled`**          | <code>boolean</code>                              | Turns the traffic layer on or off.                                                                                                                 |
 | **`isZoomGesturesEnabled`**          | <code>boolean</code>                              | Sets the preference for whether zoom gestures should be enabled or disabled.                                                                       |
 | **`padding`**                        | <code><a href="#mappadding">MapPadding</a></code> | Padding on the 'visible' region of the view.                                                                                                       |
+| **`mapTypeId`**                      | <code>string \| null</code>                       | The initial Map mapTypeId. Defaults to &lt;code&gt;ROADMAP&lt;/code&gt;.                                                                           |
 
 
 #### MapPadding

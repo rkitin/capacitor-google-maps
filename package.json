@@ -1,6 +1,5 @@
 {
   "name": "root",
-  "private": true,
   "scripts": {
     "prepare": "husky",
     "build": "lerna run build && yes | cp ./plugin/README.md ./README.md",
@@ -30,6 +29,8 @@
     "plugin"
   ],
   "dependencies": {
-    "npm": "^10.8.1"
+    "eslint": "^8.57.0",
+    "npm": "^10.8.1",
+    "pnpm": "^9.5.0"
   }
 }

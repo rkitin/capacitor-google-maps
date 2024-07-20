@@ -245,6 +245,10 @@ export interface GoogleMapConfig extends google.maps.MapOptions {
    * Padding on the 'visible' region of the view.
    */
   padding?: MapPadding;
+  /**
+   * The initial Map mapTypeId. Defaults to <code>ROADMAP</code>.
+   */
+  mapTypeId?: string | null;
 }
 
 /**
