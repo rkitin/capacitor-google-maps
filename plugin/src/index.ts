@@ -17,7 +17,7 @@ export { GoogleMap, LatLngBounds, MapType, Marker, Polygon, Circle, Polyline, St
 declare global {
   export namespace JSX {
     export interface IntrinsicElements {
-      'capacitor-google-map': unknown;
+      'capacitor-google-map': any;
     }
   }
 }

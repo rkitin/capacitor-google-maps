@@ -52,7 +52,7 @@ export interface GoogleMapInterface {
   removeCircles(ids: string[]): Promise<void>;
   addPolylines(polylines: Polyline[]): Promise<string[]>;
   removePolylines(ids: string[]): Promise<void>;
-  addFeatures(type: FeatureType, data: unknown, idPropertyName?: string, styles?: FeatureStyles): Promise<string[]>;
+  addFeatures(type: FeatureType, data: any, idPropertyName?: string, styles?: FeatureStyles): Promise<string[]>;
   getFeatureBounds(featureId: string): Promise<LatLngBounds>;
   removeFeature(featureId: string): Promise<void>;
   destroy(): Promise<void>;
@@ -121,7 +121,7 @@ class MapCustomElement extends HTMLElement {
 
     if (Capacitor.getPlatform() == 'ios') {
       this.style.overflow = 'scroll';
-      (this.style as unknown)['-webkit-overflow-scrolling'] = 'touch';
+      (this.style as any)['-webkit-overflow-scrolling'] = 'touch';
 
       const overflowDiv = document.createElement('div');
       overflowDiv.style.height = '200%';
@@ -196,7 +196,7 @@ export class GoogleMap {
     }
 
     if (Capacitor.isNativePlatform()) {
-      (options.element as unknown) = {};
+      (options.element as any) = {};
 
       const getMapBounds = () => {
         const mapRect = newMap.element?.getBoundingClientRect() ?? ({} as DOMRect);
@@ -362,7 +362,7 @@ export class GoogleMap {
   /**
    * Adds a TileOverlay to the map
    */
-  async addTileOverlay(tiles: TileOverlay): Promise<unknown> {
+  async addTileOverlay(tiles: TileOverlay): Promise<any> {
     return await CapacitorGoogleMaps.addTileOverlay({
       id: this.id,
       ...tiles,
@@ -390,10 +390,10 @@ export class GoogleMap {
    * @returns void
    */
   async update(config: GoogleMapConfig): Promise<void> {
-    Object.assign(this.config as unknown, config);
+    Object.assign(this.config as any, config);
 
     // Convert restriction latLngBounds to LatLngBoundsLiteral if its in LatLngBounds format
-    if (config.restriction?.latLngBounds && (config.restriction.latLngBounds as unknown)?.toJSON) {
+    if (config.restriction?.latLngBounds && (config.restriction.latLngBounds as any)?.toJSON) {
       config.restriction.latLngBounds = (config.restriction.latLngBounds as google.maps.LatLngBounds).toJSON();
     }
 
@@ -501,12 +501,7 @@ export class GoogleMap {
     });
   }
 
-  async addFeatures(
-    type: FeatureType,
-    data: unknown,
-    idPropertyName?: string,
-    styles?: FeatureStyles
-  ): Promise<string[]> {
+  async addFeatures(type: FeatureType, data: any, idPropertyName?: string, styles?: FeatureStyles): Promise<string[]> {
     const res = await CapacitorGoogleMaps.addFeatures({
       id: this.id,
       type,
@@ -702,7 +697,7 @@ export class GoogleMap {
 
     // eslint-disable-next-line @typescript-eslint/prefer-for-of
     for (let i = 0; i < ionContents.length; i++) {
-      (ionContents[i] as unknown).scrollEvents = true;
+      (ionContents[i] as any).scrollEvents = true;
     }
 
     window.addEventListener('ionScroll', this.handleScrollEvent);
@@ -1189,9 +1184,9 @@ export class GoogleMap {
     }
   }
 
-  private generateCallback(callback: MapListenerCallback<unknown>): MapListenerCallback<unknown> {
+  private generateCallback(callback: MapListenerCallback<any>): MapListenerCallback<any> {
     const mapId = this.id;
-    return (data: unknown) => {
+    return (data: any) => {
       if (data.mapId == mapId) {
         callback(data);
       }

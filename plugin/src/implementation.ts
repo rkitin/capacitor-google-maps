@@ -121,7 +121,7 @@ export interface RemovePolylinesArgs {
 export interface AddFeatureArgs {
   id: string;
   type: FeatureType;
-  data: unknown;
+  data: any;
   idPropertyName?: string;
   styles?: FeatureStyles;
 }
