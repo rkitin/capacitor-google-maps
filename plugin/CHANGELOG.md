@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [7.0.9](https://github.com/ionic-team/capacitor-plugins/compare/capacitor7-google-maps@6.0.0-beta.1...capacitor7-google-maps@7.0.9) (2024-02-07)
+# [7.0.10](https://github.com/ionic-team/capacitor-plugins/compare/capacitor7-google-maps@6.0.0-beta.1...capacitor7-google-maps@7.0.10) (2024-02-07)
 
 **Note:** Version bump only for package capacitor7-google-maps
 
