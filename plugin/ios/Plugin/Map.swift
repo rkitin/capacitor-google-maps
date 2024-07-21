@@ -189,72 +189,91 @@ public class Map {
     }
 
         func applyConfig(configObj: JSObject) {
-        DispatchQueue.main.async {
-            if (configObj as [String: Any]).keys.contains("gestureHandling"), let gestureHandling = configObj["gestureHandling"] as? String {
-                self.mapViewController.GMapView.settings.consumesGesturesInView = gestureHandling != "none"
-            }
+            DispatchQueue.main.async {
+                guard let config = configObj as? [String: Any] else { 
+                    print("Invalid config object")
+                    return 
+                }
+                
+                guard let mapView = self.mapViewController?.GMapView else {
+                    print("GMapView is nil")
+                    return
+                }
 
-            if (configObj as [String: Any]).keys.contains("isAccessibilityElementsEnabled"), let isAccessibilityElementsEnabled = configObj["isAccessibilityElementsEnabled"] as? Bool {
-                self.mapViewController.GMapView.accessibilityElementsHidden = isAccessibilityElementsEnabled
-            }
-
-            if (configObj as [String: Any]).keys.contains("isCompassEnabled"), let isCompassEnabled = configObj["isCompassEnabled"] as? Bool {
-                self.mapViewController.GMapView.settings.compassButton = isCompassEnabled
-            }
-
-            if (configObj as [String: Any]).keys.contains("isIndoorMapsEnabled"), let isIndoorMapsEnabled = configObj["isIndoorMapsEnabled"] as? Bool {
-                self.mapViewController.GMapView.isIndoorEnabled = isIndoorMapsEnabled
-            }
-
-            if (configObj as [String: Any]).keys.contains("isMyLocationButtonEnabled"), let isMyLocationButtonEnabled = configObj["isMyLocationButtonEnabled"] as? Bool {
-                self.mapViewController.GMapView.settings.myLocationButton = isMyLocationButtonEnabled
-            }
-
-            if (configObj as [String: Any]).keys.contains("isMyLocationEnabled"), let isMyLocationEnabled = configObj["isMyLocationEnabled"] as? Bool {
-                self.mapViewController.GMapView.isMyLocationEnabled = isMyLocationEnabled
-            }
-
-            if (configObj as [String: Any]).keys.contains("isRotateGesturesEnabled"), let isRotateGesturesEnabled = configObj["isRotateGesturesEnabled"] as? Bool {
-                self.mapViewController.GMapView.settings.rotateGestures = isRotateGesturesEnabled
-            }
-
-            if (configObj as [String: Any]).keys.contains("isTiltGesturesEnabled"), let isTiltGesturesEnabled = configObj["isTiltGesturesEnabled"] as? Bool {
-                self.mapViewController.GMapView.settings.tiltGestures = isTiltGesturesEnabled
-            }
-
-            if (configObj as [String: Any]).keys.contains("isTrafficLayerEnabled"), let isTrafficLayerEnabled = configObj["isTrafficLayerEnabled"] as? Bool {
-                self.mapViewController.GMapView.isTrafficEnabled = isTrafficLayerEnabled
-            }
-
-            if (configObj as [String: Any]).keys.contains("isZoomGesturesEnabled"), let isZoomGesturesEnabled = configObj["isZoomGesturesEnabled"] as? Bool {
-                self.mapViewController.GMapView.settings.zoomGestures = isZoomGesturesEnabled
-            }
-
-            if (configObj as [String: Any]).keys.contains("mapTypeId"), let mapTypeId = configObj["mapTypeId"] as? String {
-                self.setMapType(mapTypeId: mapTypeId)
-            }
-
-            if (configObj as [String: Any]).keys.contains("maxZoom"), let maxZoom = configObj["maxZoom"] as? Float {
-                self.mapViewController.GMapView.setMinZoom(self.mapViewController.GMapView.minZoom, maxZoom: maxZoom)
-            }
-
-            if (configObj as [String: Any]).keys.contains("minZoom"), let minZoom = configObj["minZoom"] as? Float {
-                self.mapViewController.GMapView.setMinZoom(minZoom, maxZoom: self.mapViewController.GMapView.maxZoom)
-            }
-
-            if (configObj as [String: Any]).keys.contains("padding"), let paddingObj = configObj["padding"] as? JSObject {
-                self.setPadding(paddingObj: paddingObj)
-            }
-
-            if (configObj as [String: Any]).keys.contains("restriction") {
-                let restrictionObj = (configObj as [String: Any])["restriction"] as? JSObject
-                self.setRestriction(restrictionObj: restrictionObj)
-            }
-
-            if (configObj as [String: Any]).keys.contains("styles"), let stylesObj = (configObj as [String: Any])["styles"] as? JSArray {
-                self.setStyle(stylesObj: stylesObj)
+                func updateSetting<T>(_ key: String, _ action: (T) -> Void) {
+                    if let value = config[key] as? T {
+                        action(value)
+                    } else {
+                        print("Key \(key) not found or type mismatch")
+                    }
+                }
+                
+                updateSetting("gestureHandling") { (gestureHandling: String) in
+                    mapView.settings.consumesGesturesInView = gestureHandling != "none"
+                }
+                
+                updateSetting("isAccessibilityElementsEnabled") { (isAccessibilityElementsEnabled: Bool) in
+                    mapView.accessibilityElementsHidden = isAccessibilityElementsEnabled
+                }
+                
+                updateSetting("isCompassEnabled") { (isCompassEnabled: Bool) in
+                    mapView.settings.compassButton = isCompassEnabled
+                }
+                
+                updateSetting("isIndoorMapsEnabled") { (isIndoorMapsEnabled: Bool) in
+                    mapView.isIndoorEnabled = isIndoorMapsEnabled
+                }
+                
+                updateSetting("isMyLocationButtonEnabled") { (isMyLocationButtonEnabled: Bool) in
+                    mapView.settings.myLocationButton = isMyLocationButtonEnabled
+                }
+                
+                updateSetting("isMyLocationEnabled") { (isMyLocationEnabled: Bool) in
+                    mapView.isMyLocationEnabled = isMyLocationEnabled
+                }
+                
+                updateSetting("isRotateGesturesEnabled") { (isRotateGesturesEnabled: Bool) in
+                    mapView.settings.rotateGestures = isRotateGesturesEnabled
+                }
+                
+                updateSetting("isTiltGesturesEnabled") { (isTiltGesturesEnabled: Bool) in
+                    mapView.settings.tiltGestures = isTiltGesturesEnabled
+                }
+                
+                updateSetting("isTrafficLayerEnabled") { (isTrafficLayerEnabled: Bool) in
+                    mapView.isTrafficEnabled = isTrafficLayerEnabled
+                }
+                
+                updateSetting("isZoomGesturesEnabled") { (isZoomGesturesEnabled: Bool) in
+                    mapView.settings.zoomGestures = isZoomGesturesEnabled
+                }
+                
+                updateSetting("mapTypeId") { (mapTypeId: String) in
+                    self.setMapType(mapTypeId: mapTypeId)
+                }
+                
+                updateSetting("maxZoom") { (maxZoom: Float) in
+                    mapView.setMinZoom(mapView.minZoom, maxZoom: maxZoom)
+                }
+                
+                updateSetting("minZoom") { (minZoom: Float) in
+                    mapView.setMinZoom(minZoom, maxZoom: mapView.maxZoom)
+                }
+                
+                updateSetting("padding") { (paddingObj: JSObject) in
+                    self.setPadding(paddingObj: paddingObj)
+                }
+                
+                updateSetting("restriction") { (restrictionObj: JSObject) in
+                    self.setRestriction(restrictionObj: restrictionObj)
+                }
+                
+                updateSetting("styles") { (stylesObj: JSArray) in
+                    self.setStyle(stylesObj: stylesObj)
+                }
             }
         }
+
     }
 
     private func setMapType(mapTypeId: String) {
