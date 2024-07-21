@@ -763,6 +763,7 @@ public class Map {
         newMarker.title = marker.title
         newMarker.snippet = marker.snippet
         newMarker.isFlat = marker.isFlat ?? false
+        newMarker.rotation = CLLocationDegrees(marker.rotation ?? 0)
         newMarker.opacity = marker.opacity ?? 1
         newMarker.isDraggable = marker.draggable ?? false
         newMarker.zIndex = marker.zIndex
