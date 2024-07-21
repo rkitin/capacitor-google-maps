@@ -1,6 +1,6 @@
 {
   "name": "capacitor7-google-maps",
-  "version": "7.0.5",
+  "version": "7.0.7",
   "description": "Google maps on Capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -18,7 +18,7 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "CapacitorGoogleMaps.podspec"
+    "Capacitor7GoogleMaps.podspec"
   ],
   "author": "Ionic <hi@ionicframework.com>",
   "license": "MIT",
@@ -47,7 +47,7 @@
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "pnpm run build",
-    "publish:cocoapod": "pod trunk push ./CapacitorGoogleMaps.podspec --allow-warnings",
+    "publish:cocoapod": "pod trunk push ./Capacitor7GoogleMaps.podspec --allow-warnings",
     "downleveldts": "pnpm downlevel-dts dist/typings dist/typings/ts_old --to=3.5",
     "pack-local": "pnpm run build && pnpm pack && find . -name 'capacitor-google-maps-*tgz' -exec bash -c 'mv $0 capacitor-google-maps.tgz' {} \\; ",
     "unittest:ios": "xcodebuild test -project ./unit-tests/ios/GoogleMapsPlugin/GoogleMapsPlugin.xcodeproj -scheme TestApp -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.2' | xcpretty && exit ${PIPESTATUS[0]}",
@@ -61,12 +61,12 @@
     "@ionic/prettier-config": "^1.0.1",
     "@types/resize-observer-browser": "^0.1.7",
     "@types/supercluster": "^7.1.0",
-    "downlevel-dts": "^0.7.0",
-    "eslint-plugin-import": "^2.25.4",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
+    "downlevel-dts": "^0.7.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.25.4",
     "prettier": "^2.8.8",
     "prettier-plugin-java": "~2.1.0",
     "rimraf": "^3.0.2",
@@ -91,6 +91,7 @@
   "dependencies": {
     "@googlemaps/js-api-loader": "~1.16.2",
     "@googlemaps/markerclusterer": "~2.0.7",
-    "@types/google.maps": "~3.53.4"
+    "@types/google.maps": "~3.53.4",
+    "pnpm": "^9.5.0"
   }
 }
