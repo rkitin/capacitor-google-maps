@@ -1,6 +1,6 @@
 {
   "name": "capacitor7-google-maps",
-  "version": "7.0.8",
+  "version": "7.0.9",
   "description": "Google maps on Capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
