@@ -195,7 +195,7 @@ public class Map {
                 return 
             }
             
-            guard let mapView = self.mapViewController?.GMapView else {
+            guard let mapView = self.mapViewController.GMapView else {
                 print("GMapView is nil")
                 return
             }
