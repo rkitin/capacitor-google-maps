@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { WebPlugin } from '@capacitor/core';
 import type { Cluster, onClusterClickHandler } from '@googlemaps/markerclusterer';
 import { DefaultRenderer, MarkerClusterer, SuperClusterAlgorithm } from '@googlemaps/markerclusterer';
