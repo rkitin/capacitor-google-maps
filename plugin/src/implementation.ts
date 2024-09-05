@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Plugin } from '@capacitor/core';
 import { registerPlugin } from '@capacitor/core';
 
